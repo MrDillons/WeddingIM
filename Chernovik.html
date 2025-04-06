@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>И&М — Свадебное приглашение</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Passions+Conflict&family=Stalinist+One&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Passions+Conflict&family=Stalinist+One&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Passions+Conflict&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Roboto&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Marck+Script&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: #b19d94;#ebb196
+      color: #44372f;
+    }
+
+    header {
+      background: url(./IM_Photos/Background.jpg) no-repeat center center;
+      background-size: cover; /* Масштабируем изображение, чтобы оно покрывало весь экран */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #bbb07e;
+      position: relative;
+    }
+    .aaf{
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 1s; /* Задержка перед началом */
+      
+      text-align: center;
+      white-space: nowrap;
+      font-family: 'Passions Conflict';
+      font-size: clamp(16px, 15vw, 150px);
+      margin: 5vh;
+    }
+    @keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+    
+    header h1 {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 2s; /* Задержка перед началом */
+        font-family: 'Great Vibes', serif;
+        text-shadow: 2px 2px 0 #362418;
+        font-size: clamp(16px, 15vw, 100px);
+        position: absolute; /* Абсолютное позиционирование текста */
+      bottom: 0;
+      margin-bottom: 0px;
+      
+    }
+    header h2,.section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8em;
+    }
+    header p {
+        font-family: 'Marck Script', cursive;
+        text-shadow: 2px 2px 0 #362418;
+        font-size: 1.3em;
+        margin: 0.5em;
+    }
+    .Header_Date{
+      font-family: 'Stalinist One', cursive;
+      font-size: clamp(16px, 7vw, 150px);
+      color: #49371f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Main_info{
+      font-family: 'Marck Script', cursive;
+      font-size: clamp(16px, 3vw, 150px);
+      color: #49371f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .body_main{
+      height: 100vh;
+      background-size: cover;
+      background: url(./IM_Photos/Background2.jpg) no-repeat center center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section {
+      
+      padding: 2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .palette {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1em 0;
+    }
+
+    .color-swatch1,.color-swatch2,.color-swatch3,.color-swatch4,.color-swatch5,.color-swatch5,.color-swatch6{
+      border: 5px dotted #5c491f;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .color1,.color2,.color3,.color4,.color5,.color6{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .color1{
+      background:url(./IM_Colors/Black.jpg) ;
+    }
+    .color2{
+      background:url(./IM_Colors/Сhocolate.jpg) ;
+    }
+    .color3{
+
+      background:url(./IM_Colors/Milk_Сhocolate.jpg) ;
+    }
+    .color4{
+      background:url(./IM_Colors/Sandy.jpg) ;
+    }
+    .color5{
+      background:url(./IM_Colors/Pink_Gray.jpg) ;
+    }
+    .color6{
+      background:url(./IM_Colors/Flash.jpg) ;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input[type="text"] {
+      padding: 0.5em;
+      font-size: 1em;
+    }
+
+    label {
+      margin-top: 1em;
+    }
+
+    button {
+      background: #6c8e6e;
+      color: white;
+      padding: 0.7em;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+    }
+
+
+  </style>
+
+
+
+
+</head>
+<body>
+  <header>
+    <p class="aaf">always and forever...</p>
+    <h1>Иван & Марина</h1>
+  </header>
+
+ <section class="Body_Main">
+  <section class="Main_info">
+    <h2>Дорогие родные и близкие!</h2>
+    <p>В нашей жизни предстоят счастливые перемены!</p>
+    <p>Мы хотим, чтобы в этот день рядом с нами были самые близкие и дорогие для нас люди. Будем рады разделить с вами праздник в день нашей свадьбы, которая состоится:</p>
+    <p class="Header_Date">01.08.2025</p>
+  </section>
+  
+
+
+  <section class="section">
+    <h2>Место проведения</h2>
+    <h3>"Inji" </h3>
+    <p>Нижний Тагил, микрорайон Красный Камень, Восточная улица 18</p>
+    <p>Сбор гостей в 15:40</p>
+  </section>
+
+  <section class="section">
+    <h2>Дресс-код</h2>
+    <p style="text-align: center;">Мы ждем и с удовольствием готовимся к нашему незабываемому дню!</p>
+      <p style="text-align: center;">Пожалуйста, поддержите нас вашими улыбками, объятиями, а так же прекрасными нарядами в палитре торжества:</p>
+    <div class="palette">
+      <div class="color-swatch1"></div>
+      <div class="color-swatch2"></div>
+      <div class="color-swatch3"></div>
+      <div class="color-swatch4"></div>
+      <div class="color-swatch5"></div>
+      <div class="color-swatch6"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Просим вас подтвердить своё присутствие и заполнить форму ниже:</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя и фамилия" required />
+      <label>
+        <input type="radio" name="attendance" value="yes" required /> Да, с удовольствием!
+      </label>
+      <label>
+        <input type="radio" name="attendance" value="no" required /> К сожалению, не смогу…
+      </label>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+</section>
+</body>
+</html>

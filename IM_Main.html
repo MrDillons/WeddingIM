@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>И&М — Свадебное приглашение</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Passions+Conflict&family=Stalinist+One&family=Marck+Script&family=Lora&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      color: #44372f;
+    }
+
+    header {
+      background: url('./IM_Photos/Background.jpg') no-repeat center center;
+      background-size: cover;
+      height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Вертикальное распределение */
+      align-items: center;
+      color: #bbb07e;
+      position: relative;
+      text-align: center;
+      padding: 2rem 0; /* Дополнительные отступы сверху и снизу */
+    }
+
+    .aaf {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 1s;
+      text-shadow: 1px 1px 0 #362418;
+      font-family: 'Passions Conflict', cursive;
+      font-size: clamp(24px, 10vw, 120px);
+      margin-top: 0; /* Надпись будет на самом верху */
+    }
+
+    header h1 {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      animation-delay: 2s;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 2px 2px 0 #362418;
+      font-size: clamp(32px, 10vw, 100px);
+      margin-bottom: 0; /* Надпись будет внизу */
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .Header_Date {
+      font-family: 'Stalinist One', cursive;
+      font-size: clamp(24px, 7vw, 80px);
+      color: #49371f;
+      text-align: center;
+      margin: 1em 0;
+      text-shadow: 0 0 10px rgba(255, 245, 200, 0.8);
+    }
+
+    .Main_info {
+      font-family: 'Marck Script', cursive;
+      font-size: clamp(18px, 2.5vw, 28px);
+      color: #49371f;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .body_main {
+      background: url('./IM_Photos/Background2.jpg') no-repeat center center;
+      background-size: cover;
+      background-color: #cfa78c;
+      border-radius: 0 0 21px 21px;
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 2em auto;
+      padding: 2em;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-family: 'Marck Script', cursive;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .palette {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1em;
+    }
+
+    .color-swatch1, .color-swatch2, .color-swatch3, .color-swatch4, .color-swatch5, .color-swatch6 {
+      border: 4px dotted #5c491f;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .color-swatch1 { background-image: url('./IM_Colors/Black.jpg'); }
+    .color-swatch2 { background-image: url('./IM_Colors/Сhocolate.jpg'); }
+    .color-swatch3 { background-image: url('./IM_Colors/Milk_Сhocolate.jpg'); }
+    .color-swatch4 { background-image: url('./IM_Colors/Sandy.jpg'); }
+    .color-swatch5 { background-image: url('./IM_Colors/Pink_Gray.jpg'); }
+    .color-swatch6 { background-image: url('./IM_Colors/Flash.jpg'); }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    input[type="text"] {
+      padding: 0.5em;
+      font-size: 1em;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+    }
+
+    label {
+      font-family: 'Marck Script', cursive;
+      font-size: 1.2em;
+    }
+
+    /* Слайдшоу */
+    .body_bottom {
+      width: 100%;
+      height: 700px; /* Высота слайдшоу */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slideshow-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-group {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+    }
+
+    .slide-group.active {
+      opacity: 1;
+    }
+
+    .slide {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="aaf">always and forever...</p>
+    <h1>Иван & Марина</h1>
+  </header>
+
+  <div class="body_main">
+    <section class="Main_info">
+      <h2>Дорогие родные и близкие!</h2>
+      <p>В нашей жизни предстоят счастливые перемены!</p>
+      <p>Мы хотим, чтобы в этот день рядом с нами были самые близкие и дорогие для нас люди. Будем рады разделить с вами праздник в день нашей свадьбы, которая состоится:</p>
+      <p class="Header_Date">01.08.2025</p>
+    </section>
+
+    <section class="section">
+      <h2>Место проведения</h2>
+      <h3>"Inji"</h3>
+      <p>Нижний Тагил, микрорайон Красный Камень, Восточная улица 18</p>
+      <p>Сбор гостей в 15:40</p>
+    </section>
+
+    <section class="section">
+      <h2>Дресс-код</h2>
+      <p style="text-align: center;">Мы ждем и с удовольствием готовимся к нашему незабываемому дню!</p>
+      <p style="text-align: center;">Пожалуйста, поддержите нас вашими улыбками, объятиями, а так же прекрасными нарядами в палитре торжества:</p>
+      <div class="palette">
+        <div class="color-swatch1"></div>
+        <div class="color-swatch2"></div>
+        <div class="color-swatch3"></div>
+        <div class="color-swatch4"></div>
+        <div class="color-swatch5"></div>
+        <div class="color-swatch6"></div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center; margin-bottom: 0;">
+      <h2>Просим вас подтвердить свое присутствие.</h2>
+      <p>Eсли вы планируете присутствовать на нашем уютном празднике, то переходите по ссылке и добавляйтесь в беседу.</p>
+      <a href="https://t.me/+OqfZJDfFSjUyZDhi" 
+         style="display: inline-block; width: 120px; height: 120px; border-radius: 2em; background-image: url('./IM_Photos/TG.jpg'); background-size: cover; background-position: center;"
+         title="Присоединиться к беседе в Telegram">
+      </a>
+      <p style="font-size: 12px;">Если у вас в профиле telegram указано не ваше имя, то напишите свое имя и фамилию жениху или невесте.</p>
+    </section>
+  </div>
+
+  <div class="body_bottom">
+    <div class="slideshow-container">
+      <div class="slide-group active">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide1.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide2.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide3.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide4.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide5.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide6.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide7.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide8.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide9.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide10.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide11.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide12.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide13.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide14.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide15.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide16.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide17.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide18.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide19.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide20.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide21.jpg');"></div>
+      </div>
+      <div class="slide-group">
+        <div class="slide" style="border-radius: 20px 0 0 0;background-image: url('./IM_Photos/Slides/Slide22.jpg');"></div>
+        <div class="slide" style="background-image: url('./IM_Photos/Slides/Slide23.jpg');"></div>
+        <div class="slide" style="border-radius: 0 20px 0 0;background-image: url('./IM_Photos/Slides/Slide24.jpg');"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slideGroups = document.querySelectorAll('.slide-group');
+    let currentGroup = 0;
+  
+    setInterval(() => {
+      // Анимация смены слайдов внутри группы
+      const slides = slideGroups[currentGroup].querySelectorAll('.slide');
+      let currentSlide = 0;
+      
+
+      slideGroups[currentGroup].classList.remove('active');
+      currentGroup = (currentGroup + 1) % slideGroups.length;
+      slideGroups[currentGroup].classList.add('active');
+    }, 9000); // 7 секунд для смены группы
+  </script>
+</body>
+</html>
